@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace绑定一个对应的dao/mapper接口-->
+<mapper namespace="cn.cuitrwx.studyabroadprogramService.dao.userdao">
+
+    <select id="getProgramTable"  resultType="cn.cuitrwx.studyabroadprogramService.model.programtable">
+        select * from cuitrwx.study_abroad_type where overseas_study_id = #{overseas_study_id}
+    </select>
+    <select id="getAllProgramTable"  resultType="cn.cuitrwx.studyabroadprogramService.model.programtable">
+        select * from cuitrwx.study_abroad_type
+    </select>
+</mapper>
